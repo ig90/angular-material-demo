@@ -21,6 +21,17 @@ export class AppComponent {
 
   car = '2'; // default select option
 
+  progress = 0;
+  timer;
+  constructor() {
+    this.timer = setInterval(() => {
+      this.progress++;
+      if(this.progress == 100) {
+          clearInterval(this.timer);
+      }
+    }, 20 );
+  }
+
   cars: Cars[] = [
     { value: '1', viewValue: 'Toyota' },
     { value: '2', viewValue: 'Honda' },
