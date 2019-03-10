@@ -21,6 +21,10 @@ export class AppComponent {
 
   car = '2'; // default select option
 
+  position = [
+    { value: 'bottom' }
+  ];
+
   progress = 0;
   timer;
   constructor() {
