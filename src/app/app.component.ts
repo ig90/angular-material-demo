@@ -36,6 +36,19 @@ export class AppComponent {
     { id: 5, name: 'Iphone' }
 
   ];
+  categories = [
+    { name: 'Begginer' },
+    { name: 'Intermediate' },
+    { name: 'Advanced' }
+  ];
+
+  selectCategory(category) {
+    this.categories
+    .filter( c=> c!= category)
+    .forEach(c => c['selected'] = false );
+
+    category.selected = !category.selected;
+  }
 
   minDate = new Date(1900, 1, 1);
   maxDate = new Date(2001, 1, 1);

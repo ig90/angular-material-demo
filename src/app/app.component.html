@@ -76,6 +76,16 @@
 <button mat-flat-button color="primary">Button 5</button>
 <button mat-fab><mat-icon>add</mat-icon></button>
 
+<h4> Chips </h4>
+<mat-chip-list>
+    <mat-chip 
+    (click)="selectCategory(category)"
+    [selected]="category.selected"
+    color="accent" 
+    *ngFor="let category of categories">
+    {{ category.name }}
+  </mat-chip>
+  </mat-chip-list>
 </div>
 
 <router-outlet></router-outlet> 
