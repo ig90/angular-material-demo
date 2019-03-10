@@ -19,7 +19,7 @@ export class AppComponent {
   title = 'angular-material-demo';
   isChecked = false;
 
-  car = '2';
+  car = '2'; // default select option
 
   cars: Cars[] = [
     { value: '1', viewValue: 'Toyota' },
