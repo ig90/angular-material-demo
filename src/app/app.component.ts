@@ -37,6 +37,9 @@ export class AppComponent {
 
   ];
 
+  minDate = new Date(1900, 1, 1);
+  maxDate = new Date(2001, 1, 1);
+
   onChange($event) {
     console.log($event);
   }

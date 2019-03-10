@@ -23,7 +23,7 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
-
+<div class="container">
   <h4>Select smartphone:</h4>
   <mat-form-field>
     <mat-select placeholder="Smartphones">
@@ -33,6 +33,39 @@
     </mat-select>
   </mat-form-field>
 
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input ngModel #username="ngModel" required name="username" type="text" matInput placeholder="Username">
+      <mat-hint>Type a unique username.</mat-hint>
+      <span mdSuffix>@domain.com</span>
+      <mat-error *ngIf="username.invalid && username.errors.required">
+        The username field is required
+      </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <textarea cdkTextareaAutosize matInput placeholder="Leave a comment"></textarea>
+    </mat-form-field>
+  </form>
 
+  <!-- <mat-form-field>
+      <input matInput [matDatepicker]="birthdate" placeholder="choose a birthdate">
+      <mat-datepicker-toggle matSuffix [for]="birthdate"></mat-datepicker-toggle>
+      <mat-datepicker #birthdate touchUi="true"></mat-datepicker>
+  </mat-form-field> -->
+
+  <mat-form-field>
+      <input 
+        (focus)="birthdate.open()"
+        [min]="minDate"
+        [max]="maxDate"
+        matInput 
+        [matDatepicker]="birthdate" 
+        placeholder="choose a birthdate">
+      <mat-datepicker-toggle matSuffix [for]="birthdate"></mat-datepicker-toggle>
+      <mat-datepicker #birthdate touchUi="true"></mat-datepicker>
+  </mat-form-field>
+
+</div>
 
 <router-outlet></router-outlet> 
