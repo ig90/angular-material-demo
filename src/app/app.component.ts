@@ -17,15 +17,11 @@ export interface Smartphones {
 })
 export class AppComponent {
   title = 'angular-material-demo';
-  isChecked = false;
+  isChecked = false; // checkbox
 
   car = '2'; // default select option
 
-  position = [
-    { value: 'bottom' }
-  ];
-
-  progress = 0;
+  progress = 0; // progress spinner
   timer;
   constructor() {
     this.timer = setInterval(() => {
@@ -68,7 +64,8 @@ export class AppComponent {
   minDate = new Date(1900, 1, 1);
   maxDate = new Date(2001, 1, 1);
 
-  onChange($event) {
+  onChange($event) { // used by checkbox
     console.log($event);
   }
+
 }
