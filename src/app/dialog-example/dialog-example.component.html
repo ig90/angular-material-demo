@@ -1,0 +1,15 @@
+<h4>Dialog</h4>
+
+<ol>
+    <li>
+      <mat-form-field>
+        <input matInput [(ngModel)]="name" placeholder="What's your name?">
+      </mat-form-field>
+    </li>
+    <li>
+      <button mat-raised-button (click)="openDialog()">Pick one</button>
+    </li>
+    <li *ngIf="course">
+      You chose: <i>{{course}}</i>
+    </li>
+</ol>

@@ -76,7 +76,7 @@
 <button mat-flat-button color="primary">Button 5</button>
 <button mat-fab><mat-icon>add</mat-icon></button>
 
-<h4> Chips </h4>
+<h4>Chips</h4>
 <mat-chip-list>
     <mat-chip 
     (click)="selectCategory(category)"
@@ -92,7 +92,7 @@
 <mat-spinner mode="determinate" [value]="progress"></mat-spinner>
 
 
-<h5> Tooltips </h5>
+<h5>Tooltips</h5>
 <button mat-raised-button
         matTooltip="Info about the action"
         aria-label="Button that displays a tooltip when focused or hovered over">
@@ -102,11 +102,14 @@
 <span matTooltip="some info"> hover me</span>
 <span matTooltip="some info" matTooltipPosition="right"> hover me</span>
 
+<h4>Tabs</h4>
 <mat-tab-group>
     <mat-tab label="First"> Content 1 </mat-tab>
     <mat-tab label="Second"> Content 2 </mat-tab>
     <mat-tab label="Third"> Content 3 </mat-tab>
 </mat-tab-group> 
+
+<app-dialog-example></app-dialog-example>
 
 </div>
 
