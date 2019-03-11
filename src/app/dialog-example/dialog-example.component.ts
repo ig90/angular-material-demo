@@ -17,18 +17,17 @@ export class DialogExampleComponent {
   course: string;
   name: string;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(EditCourseComponent, {
       width: '250px',
       data: {name: this.name, course: this.course}
     });
-
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       this.course = result;
     });
   }
-
 }
+
